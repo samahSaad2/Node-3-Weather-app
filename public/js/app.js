@@ -18,7 +18,7 @@ weatherForm.addEventListener('submit',(event) =>{
   const location = search.value
   messageOne.textContent='';
   messageTwo.textContent=''
-  fetch('https://api.weatherstack.com/current?access_key=4cfa126858c6544ae117d7b1e99af069&query='+location).then((response)=>{
+  fetch('http://api.weatherstack.com/current?access_key=4cfa126858c6544ae117d7b1e99af069&query='+location).then((response)=>{
     response.json().then((data)=>{
         if(data.error)
         {
