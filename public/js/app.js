@@ -27,7 +27,8 @@ weatherForm.addEventListener('submit',(event) =>{
         }
         else 
         {
-            messageOne.textContent=data.current.weather_descriptions[0]+".It is currently"+data.current.temperature+"degrees out. It feels like"+data.current.feelslike+"degrees out."
+            messageOne.textContent=data.current.weather_descriptions[0]+" .It is currently "+data.current.temperature+
+            " degrees out. It feels like "+data.current.feelslike+" degrees out." + " Cloud Cover = "+data.current.cloudcover;
             messageTwo.textContent = data.location.name
         }
     
