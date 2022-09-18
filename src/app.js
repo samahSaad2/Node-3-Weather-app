@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
 const forecast = require('./utils/weather.js')
+const port = process.env.PORT || 3000
 const app = express()
 // Define paths to Express config
 const publicDirectoryPath = path.join(__dirname,'../public')
@@ -70,7 +71,7 @@ app.get('*',(req,res)=>{
         errorMessage : 'My 404 Page'
         })
 })
-app.listen(3000,()=>{
-    console.log("The server is on port 3000")
+app.listen(port,()=>{
+    console.log("The server is on port"+port)
 })  // to app work on port 3000
 
